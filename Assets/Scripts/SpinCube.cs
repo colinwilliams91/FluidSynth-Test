@@ -13,6 +13,6 @@ public class SpinCube : MonoBehaviour
 
     void Update()
     {
-        
+        transform.Rotate(RotateAmount);
     }
 }
