@@ -18,7 +18,7 @@ foreach ($entry in $ignoreEntries) {
     }
     
     # Use git rm --cached for each entry
-    $command = "git rm --cached -r --ignore-unmatch --dry-run $entry"
+    $command = "git rm --cached -r --ignore-unmatch $entry"
     Write-Host "Executing: $command"
     Invoke-Expression $command
 }
