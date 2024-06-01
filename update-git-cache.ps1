@@ -18,6 +18,8 @@ foreach ($entry in $ignoreEntries) {
     }
     
     # Use git rm --cached for each entry
+    # -r will enforce recursive rm
+    # --ignore-unmatch prevents error from not found dir/file
     $command = "git rm --cached -r --ignore-unmatch $entry"
     Write-Host "Executing: $command"
     Invoke-Expression $command
